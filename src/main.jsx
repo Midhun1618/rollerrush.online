@@ -150,7 +150,11 @@ function App() {
         <section className="final-cta"><div className="cta-confetti">✦　✧　✦　✧　✦</div><div className="eyebrow">YOUR NEXT FAVOURITE RUN IS ONE TAP AWAY</div><h2>LESS TALK.<br /><span>MORE ROLL.</span></h2><p>Grab your skates. Nico's waiting.</p><a href={PLAY_URL} target="_blank" rel="noreferrer" className="btn-primary cta-button"><Play fill="currentColor" /> DOWNLOAD FREE ON GOOGLE PLAY <ArrowUpRight /></a><div className="cta-sub">ANDROID • FREE TO DOWNLOAD • MADE FOR THE RUSH</div><div className="cta-track" /></section>
       </main>
 
-      <footer className="footer"><a href="#top" className="brand"><span className="brand-mark">RR</span><span>ROLLER <b>RUSH</b></span></a><p>© {new Date().getFullYear()} Roller Rush · A VOXCOM game</p><div className="footer-links"><a href={PLAY_URL} target="_blank" rel="noreferrer">GOOGLE PLAY <ArrowUpRight size={14} /></a><a href={PRIVACY_URL} target="_blank" rel="noreferrer">PRIVACY POLICY <ArrowUpRight size={14} /></a><a href="mailto:voxcom.online@gmail.com">CONTACT <ArrowUpRight size={14} /></a></div></footer>
+      <footer className="footer"><a href="#top" className="brand"><span className="brand-mark">RR</span><span>ROLLER <b>RUSH</b></span></a><p>© {new Date().getFullYear()} Roller Rush · A VOXCOM game</p><div className="footer-links">
+        <a href={PLAY_URL} target="_blank" rel="noreferrer">GOOGLE PLAY <ArrowUpRight size={14} /></a>
+        <a href={PRIVACY_URL} target="_blank" rel="noreferrer">PRIVACY POLICY <ArrowUpRight size={14} /></a>
+      <a href="mailto:voxcom.online@gmail.com">CONTACT <ArrowUpRight size={14} /></a></div>
+      <a href="/account-deletion.html">ACCOUNT DELETION <ArrowUpRight size={14} /></a></footer>
 
       <AnimatePresence>{lightbox && <motion.div className="lightbox" role="dialog" aria-modal="true" aria-label={lightbox.label} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setLightbox(null)}><button aria-label="Close preview" onClick={() => setLightbox(null)}>×</button><motion.img src={lightbox.src} alt={lightbox.alt} initial={{ scale: 0.92 }} animate={{ scale: 1 }} /><p>{lightbox.label}</p></motion.div>}</AnimatePresence>
     </div>
